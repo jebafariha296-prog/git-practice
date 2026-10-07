@@ -1,0 +1,199 @@
+/* Fariha's personal profile — responsive CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --ink: #202a44;
+  --muted: #52617b;
+  --brand: #6756c7;
+  --brand-dark: #4b3a9d;
+  --surface: #ffffff;
+  --page: #f5f5fb;
+  --line: #e3e5ef;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  line-height: 1.65;
+}
+header {
+  background: linear-gradient(135deg, #272452, #6756c7);
+  color: #fff;
+  padding: 4rem 1.25rem 2rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+header p {
+  margin: .8rem 0 1.8rem;
+  color: #e9e5ff;
+  font-size: 1.12rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: inline-block;
+  padding: .6rem .9rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover,
+nav a:focus-visible {
+  background: #ffffff26;
+}
+main {
+  width: min(92%, 960px);
+  margin: 2.5rem auto 4rem;
+}
+section {
+  background: var(--surface);
+  padding: clamp(1.3rem, 4vw, 2.6rem);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 35px #2420440a;
+  scroll-margin-top: 1rem;
+}
+h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  letter-spacing: -.025em;
+  margin: 0 0 1rem;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: .55rem;
+  border-radius: 4px;
+  background: var(--brand);
+}
+p {
+  margin: .75rem 0;
+  color: var(--muted);
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  padding: 0;
+  list-style: none;
+}
+#skills li {
+  background: #efedff;
+  color: var(--brand-dark);
+  padding: .45rem .9rem;
+  border-radius: 999px;
+  font-weight: 650;
+}
+#projects article {
+  padding: 1.4rem;
+  margin-top: 1rem;
+  background: #f9f9ff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+article h3 {
+  margin: 0 0 .4rem;
+}
+form {
+  margin-top: 1.4rem;
+}
+form div {
+  margin-bottom: 1.2rem;
+}
+label {
+  display: block;
+  margin-bottom: .4rem;
+  font-weight: 650;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: .85rem 1rem;
+  border: 1px solid #aeb5c7;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #a99df4;
+  outline-offset: 2px;
+}
+button {
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: .9rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+button:hover {
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+footer {
+  text-align: center;
+  padding: 1.8rem 1rem;
+  background: #272452;
+}
+footer p {
+  margin: 0;
+  color: #f1efff;
+}
+@media (max-width: 600px) {
+  header {
+    padding-top: 3rem;
+  }
+  main {
+    margin-top: 1.3rem;
+  }
+  section {
+    border-radius: 12px;
+  }
+  nav a {
+    padding: .5rem .65rem;
+  }
+  button {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  button {
+    transition: none;
+  }
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal profile of Fariha, an aspiring full-stack developer">
     <title>Fariha | Personal Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -77,10 +78,10 @@
             <h2>Contact Me</h2>
 
             <p>
-                Complete the form below to send me a message.
+                Use the form below to practice contact form validation. Messages are not sent yet.
             </p>
 
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Form validated! To receive messages, connect a form service or backend.');">
 
                 <div>
                     <label for="name">Full Name:</label>
